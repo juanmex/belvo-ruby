@@ -6,7 +6,7 @@
 <title>
   Class: Belvo::TaxReturn
   
-    &mdash; Documentation by YARD 0.9.25
+    &mdash; Documentation by YARD 0.9.27
   
 </title>
 
@@ -112,7 +112,17 @@
 <div class="tags">
   
 
-</div>
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="TaxReturn/TaxReturnType.html" title="Belvo::TaxReturn::TaxReturnType (class)">TaxReturnType</a></span>
+    
+  
+</p>
+
 
 
 
@@ -183,7 +193,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#retrieve-instance_method" title="#retrieve (instance method)">#<strong>retrieve</strong>(link:, year_from:, year_to:, options: nil)  &#x21d2; Hash </a>
+      <a href="#retrieve-instance_method" title="#retrieve (instance method)">#<strong>retrieve</strong>(link:, year_from: nil, year_to: nil, options: nil)  &#x21d2; Hash </a>
     
 
     
@@ -247,17 +257,17 @@
       <pre class="lines">
 
 
-315
-316
-317
-318</pre>
+434
+435
+436
+437</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 315</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 434</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='rparen'>)</span>
-  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tax-returns/</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>api/tax-returns/</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -286,12 +296,12 @@
       <pre class="lines">
 
 
-342
-343
-344</pre>
+471
+472
+473</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 342</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 471</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resume'>resume</span><span class='lparen'>(</span><span class='id identifier rubyid__session_id'>_session_id</span><span class='comma'>,</span> <span class='id identifier rubyid__token'>_token</span><span class='comma'>,</span> <span class='label'>_link:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TaxReturn does not support resuming a session.</span><span class='tstring_end'>&#39;</span></span>
@@ -304,7 +314,7 @@
       <div class="method_details ">
   <h3 class="signature " id="retrieve-instance_method">
   
-    #<strong>retrieve</strong>(link:, year_from:, year_to:, options: nil)  &#x21d2; <tt>Hash</tt> 
+    #<strong>retrieve</strong>(link:, year_from: nil, year_to: nil, options: nil)  &#x21d2; <tt>Hash</tt> 
   
 
   
@@ -346,6 +356,8 @@
         <span class='type'>(<tt>Integer</tt>)</span>
       
       
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
       
     </li>
   
@@ -356,6 +368,8 @@
       
         <span class='type'>(<tt>Integer</tt>)</span>
       
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
     </li>
@@ -423,35 +437,45 @@
       <pre class="lines">
 
 
-327
-328
-329
-330
-331
-332
-333
-334
-335
-336
-337
-338
-339
-340</pre>
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 327</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 451</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='label'>link:</span><span class='comma'>,</span> <span class='label'>year_from:</span><span class='comma'>,</span> <span class='label'>year_to:</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='label'>link:</span><span class='comma'>,</span> <span class='label'>year_from:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>year_to:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TaxReturnOptions.html" title="Belvo::TaxReturnOptions (class)">TaxReturnOptions</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='lbrace'>{</span>
     <span class='label'>link:</span> <span class='id identifier rubyid_link'>link</span><span class='comma'>,</span>
-    <span class='label'>year_from:</span> <span class='id identifier rubyid_year_from'>year_from</span><span class='comma'>,</span>
-    <span class='label'>year_to:</span> <span class='id identifier rubyid_year_to'>year_to</span><span class='comma'>,</span>
     <span class='label'>token:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span>
-    <span class='label'>encryption_key:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_encryption_key'>encryption_key</span><span class='comma'>,</span>
     <span class='label'>save_data:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_save_data'>save_data</span> <span class='op'>||</span> <span class='kw'>true</span><span class='comma'>,</span>
-    <span class='label'>attach_pdf:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_attach_pdf'>attach_pdf</span>
+    <span class='label'>attach_pdf:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_attach_pdf'>attach_pdf</span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_type'>type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="TaxReturn/TaxReturnType.html" title="Belvo::TaxReturn::TaxReturnType (class)">TaxReturnType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="TaxReturn/TaxReturnType.html#MONTHLY-constant" title="Belvo::TaxReturn::TaxReturnType::MONTHLY (constant)">MONTHLY</a></span></span>
+    <span class='id identifier rubyid_body'>body</span><span class='lbracket'>[</span><span class='symbol'>:date_from</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_date_from'>date_from</span>
+    <span class='id identifier rubyid_body'>body</span><span class='lbracket'>[</span><span class='symbol'>:date_to</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_date_to'>date_to</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_body'>body</span><span class='lbracket'>[</span><span class='symbol'>:year_from</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_year_from'>year_from</span>
+    <span class='id identifier rubyid_body'>body</span><span class='lbracket'>[</span><span class='symbol'>:year_to</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_year_to'>year_to</span>
+  <span class='kw'>end</span>
   <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='id identifier rubyid_clean'>clean</span> <span class='label'>body:</span> <span class='id identifier rubyid_body'>body</span>
   <span class='ivar'>@session</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='ivar'>@endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_body'>body</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -465,9 +489,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon May 25 13:34:26 2020 by
+  Generated on Fri Apr 29 10:36:31 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.7.0).
+  0.9.27 (ruby-2.7.6).
 </div>
 
     </div>

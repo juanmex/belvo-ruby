@@ -6,7 +6,7 @@
 <title>
   Class: Belvo::Invoice
   
-    &mdash; Documentation by YARD 0.9.25
+    &mdash; Documentation by YARD 0.9.27
   
 </title>
 
@@ -225,17 +225,17 @@
       <pre class="lines">
 
 
-284
-285
-286
-287</pre>
+325
+326
+327
+328</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 284</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 325</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='rparen'>)</span>
-  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>invoices/</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>api/invoices/</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -381,24 +381,23 @@
       <pre class="lines">
 
 
-295
-296
-297
-298
-299
-300
-301
-302
-303
-304
-305
-306
-307
-308
-309</pre>
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 295</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 336</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='label'>link:</span><span class='comma'>,</span> <span class='label'>date_from:</span><span class='comma'>,</span> <span class='label'>date_to:</span><span class='comma'>,</span> <span class='label'>type:</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="InvoiceOptions.html" title="Belvo::InvoiceOptions (class)">InvoiceOptions</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -408,7 +407,6 @@
     <span class='label'>date_to:</span> <span class='id identifier rubyid_date_to'>date_to</span><span class='comma'>,</span>
     <span class='label'>type:</span> <span class='id identifier rubyid_type'>type</span><span class='comma'>,</span>
     <span class='label'>token:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span>
-    <span class='label'>encryption_key:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_encryption_key'>encryption_key</span><span class='comma'>,</span>
     <span class='label'>save_data:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_save_data'>save_data</span> <span class='op'>||</span> <span class='kw'>true</span><span class='comma'>,</span>
     <span class='label'>attach_xml:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_attach_xml'>attach_xml</span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -425,9 +423,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon May 25 13:34:26 2020 by
+  Generated on Fri Apr 29 10:36:31 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.7.0).
+  0.9.27 (ruby-2.7.6).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Class: Belvo::TaxStatus
   
-    &mdash; Documentation by YARD 0.9.25
+    &mdash; Documentation by YARD 0.9.27
   
 </title>
 
@@ -247,17 +247,17 @@
       <pre class="lines">
 
 
-350
-351
-352
-353</pre>
+479
+480
+481
+482</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 350</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 479</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='rparen'>)</span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='rparen'>)</span>
-  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tax-status/</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@endpoint</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>api/tax-status/</span><span class='tstring_end'>&#39;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -286,12 +286,12 @@
       <pre class="lines">
 
 
-373
-374
-375</pre>
+501
+502
+503</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 373</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 501</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resume'>resume</span><span class='lparen'>(</span><span class='id identifier rubyid__session_id'>_session_id</span><span class='comma'>,</span> <span class='id identifier rubyid__token'>_token</span><span class='comma'>,</span> <span class='label'>_link:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>TaxReturn does not support resuming a session.</span><span class='tstring_end'>&#39;</span></span>
@@ -401,28 +401,26 @@
       <pre class="lines">
 
 
-360
-361
-362
-363
-364
-365
-366
-367
-368
-369
-370
-371</pre>
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 360</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 489</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_retrieve'>retrieve</span><span class='lparen'>(</span><span class='label'>link:</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TaxStatusOptions.html" title="Belvo::TaxStatusOptions (class)">TaxStatusOptions</a></span></span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='lbrace'>{</span>
     <span class='label'>link:</span> <span class='id identifier rubyid_link'>link</span><span class='comma'>,</span>
     <span class='label'>token:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_token'>token</span><span class='comma'>,</span>
-    <span class='label'>encryption_key:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_encryption_key'>encryption_key</span><span class='comma'>,</span>
     <span class='label'>save_data:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_save_data'>save_data</span> <span class='op'>||</span> <span class='kw'>true</span><span class='comma'>,</span>
     <span class='label'>attach_pdf:</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_attach_pdf'>attach_pdf</span>
   <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
@@ -439,9 +437,9 @@
 </div>
 
       <div id="footer">
-  Generated on Mon May 25 13:34:26 2020 by
+  Generated on Fri Apr 29 10:36:31 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.25 (ruby-2.7.0).
+  0.9.27 (ruby-2.7.6).
 </div>
 
     </div>
