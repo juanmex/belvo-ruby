@@ -51,7 +51,7 @@ module Belvo
     # @return [Boolean] True if credentials are valid to authenticate
     #   to Belvo API else False.
     def authenticate
-      @session.basic_auth(@key_id, @key_password)
+      @session.request(:basic_auth, @key_id, @key_password)
       response = @session.get('api/')
       response.success?
     end
