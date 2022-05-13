@@ -81,7 +81,7 @@ begin
         username: 'janedoe', 
         password: 'super-secret',
         options: { access_mode: Belvo::Link::AccessMode::SINGLE }
-        )
+    )
     
     belvo.accounts.retrieve(link: new_link['id'])
 
@@ -92,6 +92,17 @@ rescue Belvo::RequestError => e
     puts e.status_code
     puts e.detail
 end
+```
+
+## Pagination ##
+
+All `list` methods only return the first page of results. If you want to iterate by all pages, you will need to specify the `page` as a parameter
+
+```ruby
+    #`api/transactions`
+    ...
+    belvo.transactions.list(page: "2")
+    ...
 ```
 
 **Note:** If you create a `Link` without specifying [access_mode](https://docs.belvo.com/#operation/RegisterLink), the SDK will respect the default value from the API.
