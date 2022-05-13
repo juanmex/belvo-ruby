@@ -592,12 +592,12 @@
       <pre class="lines">
 
 
-50
-51
-52</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='label'>id:</span><span class='rparen'>)</span>
   <span class='ivar'>@session</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span><span class='lparen'>(</span><span class='ivar'>@endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
@@ -684,12 +684,12 @@
       <pre class="lines">
 
 
-43
-44
-45</pre>
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 39</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_detail'>detail</span><span class='lparen'>(</span><span class='label'>id:</span><span class='rparen'>)</span>
   <span class='ivar'>@session</span><span class='period'>.</span><span class='id identifier rubyid_detail'>detail</span><span class='lparen'>(</span><span class='ivar'>@endpoint</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
@@ -803,21 +803,13 @@
 
 31
 32
-33
-34
-35
-36
-37</pre>
+33</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_list'>list</span><span class='lparen'>(</span><span class='label'>params:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='id identifier rubyid_block_given?'>block_given?</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='ivar'>@session</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='lparen'>(</span><span class='ivar'>@endpoint</span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='op'>|</span>
-    <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='kw'>yield</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='id identifier rubyid_results'>results</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
-  <span class='id identifier rubyid_results'>results</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id identifier rubyid_list'>list</span><span class='lparen'>(</span><span class='ivar'>@endpoint</span><span class='comma'>,</span> <span class='label'>params:</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -909,13 +901,13 @@
       <pre class="lines">
 
 
-59
-60
-61
-62</pre>
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 59</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/resources.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_resume'>resume</span><span class='lparen'>(</span><span class='label'>session_id:</span><span class='comma'>,</span> <span class='label'>token:</span><span class='comma'>,</span> <span class='label'>link:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>session:</span> <span class='id identifier rubyid_session_id'>session_id</span><span class='comma'>,</span> <span class='label'>token:</span> <span class='id identifier rubyid_token'>token</span><span class='comma'>,</span> <span class='label'>link:</span> <span class='id identifier rubyid_link'>link</span> <span class='rbrace'>}</span>
@@ -931,7 +923,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May  6 08:10:02 2022 by
+  Generated on Fri May 13 11:23:49 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.27 (ruby-2.7.6).
 </div>
