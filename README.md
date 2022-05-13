@@ -101,7 +101,7 @@ All `list` methods only return the first page of results. If you want to iterate
 ```ruby
     #`api/transactions`
     ...
-    belvo.transactions.list(page: "2")
+    belvo.transactions.list(params: {page: "2"})
     ...
 ```
 
