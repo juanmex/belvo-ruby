@@ -29,11 +29,7 @@ module Belvo
     # @yield [Hash] Each result to be processed individually.
     # @raise [RequestError] If response code is different than 2XX
     def list(params: nil)
-      results = block_given? ? nil : []
-      @session.list(@endpoint, params: params) do |item|
-        results.nil? ? yield(item) : results.push(item)
-      end
-      results
+      @session.list(@endpoint, params: params)
     end
 
     # Show specific resource details

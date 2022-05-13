@@ -53,7 +53,9 @@ begin
     
     belvo.accounts.retrieve(link: link_id)
 
-    puts belvo.accounts.list
+    belvo.accounts.list.each do |item|
+        puts item
+    end
 rescue Belvo::RequestError => e
     puts e.status_code
     puts e.detail
@@ -83,7 +85,9 @@ begin
     
     belvo.accounts.retrieve(link: new_link['id'])
 
-    puts belvo.accounts.list
+    belvo.accounts.list.each do |item|
+        puts item
+    end
 rescue Belvo::RequestError => e
     puts e.status_code
     puts e.detail

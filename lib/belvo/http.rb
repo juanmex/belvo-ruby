@@ -91,16 +91,8 @@ module Belvo
     # @raise [RequestError] If response code is different than 2XX
     def list(path, params: nil)
       params = {} if params.nil?
-      loop do
-        response = get(path, params: params)
-        response.body['results'].each do |item|
-          yield item if block_given?
-        end
-
-        break unless response.body['next']
-
-        params = Faraday::Utils.parse_query URI(response.body['next']).query
-      end
+      response = get(path, params: params)
+      response.body['results']
     end
 
     # Show specific resource details

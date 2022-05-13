@@ -166,12 +166,9 @@ RSpec.describe Belvo::Invoice do
   end
 
   it 'can list invoices with pagination' do
-    mock_list_with_page_one
     mock_list_with_page_two
-    mock_list_with_page_three
     expect(
       invoices.list(params: { page: 2 })
-    ).to eq([invoice_resp.transform_keys(&:to_s),
-             invoice_resp.transform_keys(&:to_s)])
+    ).to eq([invoice_resp.transform_keys(&:to_s)])
   end
 end
