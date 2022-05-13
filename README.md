@@ -94,9 +94,9 @@ rescue Belvo::RequestError => e
 end
 ```
 
-## Pagination ##
+## Pagination
 
-All `list` methods only return the first page of results. If you want to iterate by all pages, you will need to specify the `page` as a parameter
+All `list` methods only return the first page of results. If you want to iterate by all pages, you will need to specify the `page` as a parameter:
 
 ```ruby
     #`api/transactions`
@@ -104,6 +104,7 @@ All `list` methods only return the first page of results. If you want to iterate
     belvo.transactions.list(params: {page: "2"})
     ...
 ```
+When the result of your call is `nil`, this indicates that there are not more pages to iterate over. 
 
 **Note:** If you create a `Link` without specifying [access_mode](https://docs.belvo.com/#operation/RegisterLink), the SDK will respect the default value from the API.
 
