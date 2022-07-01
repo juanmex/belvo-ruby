@@ -152,9 +152,28 @@ module Belvo
   )
   end
 
+  # @!class TaxRetentionsOptions < Faraday::Options
+  # Contains configurable properties of a tax retention
+  # @!attribute save_data [rw] Indicates whether or not to persist the
+  # data in Belvo. By default, this is set to `true` and we return a
+  # 201 Created response. When set to `false`, the data won't be persisted
+  # and we return a 200 OK response.
+  # @!attribute attach_xml [rw] When set to `true`, you will receive the XML
+  # tax retention in the response.
+  class TaxRetentionsOptions < Faraday::Options.new(
+    :save_data,
+    :attach_xml,
+    :date_from,
+    :date_to
+  )
+  end
+
   # @!class TaxStatusOptions < Faraday::Options
   # Contains configurable properties of a TaxStatus
-  # @!attribute save_data [rw] Should data be persisted or not.
+  # @!attribute save_data [rw] Indicates whether or not to persist the data
+  # in Belvo. By default, this is set to `true` and we return a 201 Created
+  # response. When set to `false`, the data won't be persisted and we return
+  # a 200 OK response.
   # @!attribute token [rw] OTP token required by the institution
   # @!attribute attach_pdf [rw] Should the PDF file be included in the
   #   response or not.

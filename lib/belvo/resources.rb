@@ -472,6 +472,48 @@ module Belvo
     end
   end
 
+  # A tax retention is the amount of money that the payer must deduct from the
+  # total amount of a purchase invoice, according to the regulations of the
+  # fiscal institution.
+  class TaxRetentions < Resource
+    def initialize(session)
+      super(session)
+      @endpoint = 'api/tax-retentions/'
+    end
+
+    class TaxRetentionsType
+      INFLOW = 'inflow'
+      OUTFLOW = 'outflow'
+    end
+
+    # Retrieve tax retentions from a specific fiscal link.
+    # @param link [String] The `link.id` that you want to get information
+    # for (UUID).
+    # @param type [TaxRetentionsType] The type of tax retention in relation to
+    # the invoice (from the perspective of the Link owner). `OUTFLOW` relates
+    # to a tax retention for a sent invoice. `INFLOW` relates to a tax
+    # retention for a received invoice. (inflow or outflow)
+    # @param options [TaxRetentionsOptions] Configurable properties
+    def retrieve(link:, type:, options: nil)
+      options = TaxRetentionsOptions.from(options)
+      body = {
+        link: link,
+        date_from: options.date_from,
+        date_to: options.date_to,
+        save_data: options.save_data,
+        attach_xml: options.attach_xml,
+        type: type
+      }.merge(options)
+      body = clean body: body
+      @session.post(@endpoint, body)
+    end
+
+    def resume(_session_id, _token, _link: nil)
+      raise NotImplementedError \
+        'TaxRetentions does not support resuming a session'
+    end
+  end
+
   # A Tax status is the representation of the tax situation of a person or a
   # business to the tax authority in the country.
   class TaxStatus < Resource
@@ -498,7 +540,8 @@ module Belvo
     end
 
     def resume(_session_id, _token, _link: nil)
-      raise NotImplementedError 'TaxReturn does not support resuming a session.'
+      raise NotImplementedError \
+        'TaxRetentions does not support resuming a session.'
     end
   end
 
