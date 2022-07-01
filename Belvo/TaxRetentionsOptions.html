@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Belvo::IncomeOptions
+  Class: Belvo::TaxRetentionsOptions
   
     &mdash; Documentation by YARD 0.9.28
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "Belvo::IncomeOptions";
+  pathId = "Belvo::TaxRetentionsOptions";
   relpath = '../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../_index.html">Index (I)</a> &raquo;
+    <a href="../_index.html">Index (T)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Belvo.html" title="Belvo (module)">Belvo</a></span></span>
      &raquo; 
-    <span class="title">IncomeOptions</span>
+    <span class="title">TaxRetentionsOptions</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Belvo::IncomeOptions
+      <div id="content"><h1>Class: Belvo::TaxRetentionsOptions
   
   
   
@@ -74,7 +74,7 @@
         <ul class="fullTree">
           <li>Object</li>
           
-            <li class="next">Belvo::IncomeOptions</li>
+            <li class="next">Belvo::TaxRetentionsOptions</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -102,7 +102,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Contains configurable properties of an Income</p>
+<p>Contains configurable properties of a tax retention data in Belvo. By default, this is set to `true` and we return a 201 Created response. When set to `false`, the data won&#39;t be persisted and we return a 200 OK response. tax retention in the response.</p>
 
 
   </div>
@@ -120,7 +120,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#date_from-instance_method" title="#date_from (instance method)">#<strong>date_from</strong>  &#x21d2; Object </a>
+      <a href="#attach_xml-instance_method" title="#attach_xml (instance method)">#<strong>attach_xml</strong>  &#x21d2; Object </a>
     
 
     
@@ -138,34 +138,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Date string (YYYY-MM-DD).</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#date_to-instance_method" title="#date_to (instance method)">#<strong>date_to</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Date string (YYYY-MM-DD).</p>
+<p>When set to `true`, you will receive the XML.</p>
 </div></span>
   
 </li>
@@ -192,7 +165,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Should data be persisted or not.</p>
+<p>Indicates whether or not to persist the.</p>
 </div></span>
   
 </li>
@@ -208,11 +181,11 @@
     <h2>Instance Attribute Details</h2>
     
       
-      <span id="date_from=-instance_method"></span>
+      <span id="attach_xml=-instance_method"></span>
       <div class="method_details first">
-  <h3 class="signature first" id="date_from-instance_method">
+  <h3 class="signature first" id="attach_xml-instance_method">
   
-    #<strong>date_from</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>attach_xml</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -221,7 +194,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Date string (YYYY-MM-DD)</p>
+<p>When set to `true`, you will receive the XML</p>
 
 
   </div>
@@ -235,67 +208,20 @@
       <pre class="lines">
 
 
-90
-91
-92
-93
-94
-95</pre>
+163
+164
+165
+166
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 163</span>
 
-<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Belvo::IncomeOptions (class)">IncomeOptions</a></span></span> <span class='op'>&lt;</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Belvo::TaxRetentionsOptions (class)">TaxRetentionsOptions</a></span></span> <span class='op'>&lt;</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
   <span class='symbol'>:save_data</span><span class='comma'>,</span>
-  <span class='symbol'>:date_from</span><span class='comma'>,</span>
-  <span class='symbol'>:date_to</span>
-<span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="date_to=-instance_method"></span>
-      <div class="method_details ">
-  <h3 class="signature " id="date_to-instance_method">
-  
-    #<strong>date_to</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Date string (YYYY-MM-DD)</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-90
-91
-92
-93
-94
-95</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 90</span>
-
-<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Belvo::IncomeOptions (class)">IncomeOptions</a></span></span> <span class='op'>&lt;</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
-  <span class='symbol'>:save_data</span><span class='comma'>,</span>
+  <span class='symbol'>:attach_xml</span><span class='comma'>,</span>
   <span class='symbol'>:date_from</span><span class='comma'>,</span>
   <span class='symbol'>:date_to</span>
 <span class='rparen'>)</span>
@@ -319,7 +245,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Should data be persisted or not.</p>
+<p>Indicates whether or not to persist the</p>
 
 
   </div>
@@ -333,18 +259,20 @@
       <pre class="lines">
 
 
-90
-91
-92
-93
-94
-95</pre>
+163
+164
+165
+166
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 163</span>
 
-<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Belvo::IncomeOptions (class)">IncomeOptions</a></span></span> <span class='op'>&lt;</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
+<span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Belvo::TaxRetentionsOptions (class)">TaxRetentionsOptions</a></span></span> <span class='op'>&lt;</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
   <span class='symbol'>:save_data</span><span class='comma'>,</span>
+  <span class='symbol'>:attach_xml</span><span class='comma'>,</span>
   <span class='symbol'>:date_from</span><span class='comma'>,</span>
   <span class='symbol'>:date_to</span>
 <span class='rparen'>)</span>

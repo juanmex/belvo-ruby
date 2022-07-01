@@ -6,7 +6,7 @@
 <title>
   Class: Belvo::Client
   
-    &mdash; Documentation by YARD 0.9.27
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -275,7 +275,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Provides access to Instituions resource.</p>
+<p>Provides access to the Institutions resource.</p>
 </div></span>
   
 </li>
@@ -492,6 +492,30 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Provides access to TaxComplianceStatus resource.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tax_retentions-instance_method" title="#tax_retentions (instance method)">#<strong>tax_retentions</strong>  &#x21d2; TaxRetentions </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Provides access to the TaxRetentions resource.</p>
 </div></span>
   
 </li>
@@ -961,7 +985,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Provides access to Instituions resource</p>
+<p>Provides access to the Institutions resource</p>
 
 
   </div>
@@ -988,12 +1012,12 @@
       <pre class="lines">
 
 
-115
-116
-117</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 115</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_institutions'>institutions</span>
   <span class='ivar'>@institutions</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Institution.html" title="Belvo::Institution (class)">Institution</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Institution.html#initialize-instance_method" title="Belvo::Institution#initialize (method)">new</a></span></span> <span class='ivar'>@session</span>
@@ -1042,12 +1066,12 @@
       <pre class="lines">
 
 
-127
-128
-129</pre>
+133
+134
+135</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 127</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 133</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_investments_portfolio'>investments_portfolio</span>
   <span class='ivar'>@investments_portfolio</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="InvestmentsPortfolio.html" title="Belvo::InvestmentsPortfolio (class)">InvestmentsPortfolio</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InvestmentsPortfolio.html#initialize-instance_method" title="Belvo::InvestmentsPortfolio#initialize (method)">new</a></span></span> <span class='ivar'>@session</span>
@@ -1096,12 +1120,12 @@
       <pre class="lines">
 
 
-133
-134
-135</pre>
+139
+140
+141</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 133</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 139</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_investments_transaction'>investments_transaction</span>
   <span class='ivar'>@investments_transaction</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="InvestmentsTransaction.html" title="Belvo::InvestmentsTransaction (class)">InvestmentsTransaction</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InvestmentsTransaction.html#initialize-instance_method" title="Belvo::InvestmentsTransaction#initialize (method)">new</a></span></span> <span class='ivar'>@session</span>
@@ -1490,6 +1514,60 @@
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="tax_retentions-instance_method">
+  
+    #<strong>tax_retentions</strong>  &#x21d2; <tt><span class='object_link'><a href="TaxRetentions.html" title="Belvo::TaxRetentions (class)">TaxRetentions</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Provides access to the TaxRetentions resource</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="TaxRetentions.html" title="Belvo::TaxRetentions (class)">TaxRetentions</a></span></tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+115
+116
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 115</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tax_retentions'>tax_retentions</span>
+  <span class='ivar'>@tax_retentions</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="TaxRetentions.html" title="Belvo::TaxRetentions (class)">TaxRetentions</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="TaxRetentions.html#initialize-instance_method" title="Belvo::TaxRetentions#initialize (method)">new</a></span></span> <span class='ivar'>@session</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="tax_returns-instance_method">
   
     #<strong>tax_returns</strong>  &#x21d2; <tt><span class='object_link'><a href="TaxReturn.html" title="Belvo::TaxReturn (class)">TaxReturn</a></span></tt> 
@@ -1690,12 +1768,12 @@
       <pre class="lines">
 
 
-121
-122
-123</pre>
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_widget_token'>widget_token</span>
   <span class='ivar'>@widget_token</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="WidgetToken.html" title="Belvo::WidgetToken (class)">WidgetToken</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="WidgetToken.html#initialize-instance_method" title="Belvo::WidgetToken#initialize (method)">new</a></span></span> <span class='ivar'>@session</span>
@@ -1710,9 +1788,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 13 12:49:19 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.27 (ruby-2.7.6).
+  Generated on Fri Jul  1 09:22:26 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.7.6).
 </div>
 
     </div>

@@ -6,7 +6,7 @@
 <title>
   Class: Belvo::TaxStatusOptions
   
-    &mdash; Documentation by YARD 0.9.27
+    &mdash; Documentation by YARD 0.9.28
   
 </title>
 
@@ -102,7 +102,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>Contains configurable properties of a TaxStatus</p>
+<p>Contains configurable properties of a TaxStatus in Belvo. By default, this is set to `true` and we return a 201 Created response. When set to `false`, the data won&#39;t be persisted and we return a 200 OK response.</p>
 
 
   </div>
@@ -165,7 +165,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Should data be persisted or not.</p>
+<p>Indicates whether or not to persist the data.</p>
 </div></span>
   
 </li>
@@ -235,15 +235,15 @@
       <pre class="lines">
 
 
-161
-162
-163
-164
-165
-166</pre>
+180
+181
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 180</span>
 
 <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Belvo::TaxStatusOptions (class)">TaxStatusOptions</a></span></span> <span class='op'>&lt;</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
   <span class='symbol'>:token</span><span class='comma'>,</span>
@@ -270,7 +270,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Should data be persisted or not.</p>
+<p>Indicates whether or not to persist the data</p>
 
 
   </div>
@@ -284,15 +284,15 @@
       <pre class="lines">
 
 
-161
-162
-163
-164
-165
-166</pre>
+180
+181
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 180</span>
 
 <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Belvo::TaxStatusOptions (class)">TaxStatusOptions</a></span></span> <span class='op'>&lt;</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
   <span class='symbol'>:token</span><span class='comma'>,</span>
@@ -333,15 +333,15 @@
       <pre class="lines">
 
 
-161
-162
-163
-164
-165
-166</pre>
+180
+181
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/belvo/options.rb', line 180</span>
 
 <span class='kw'>class</span> <span class='const'><span class='object_link'><a href="" title="Belvo::TaxStatusOptions (class)">TaxStatusOptions</a></span></span> <span class='op'>&lt;</span> <span class='const'>Faraday</span><span class='op'>::</span><span class='const'>Options</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
   <span class='symbol'>:token</span><span class='comma'>,</span>
@@ -360,9 +360,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 13 12:49:19 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.27 (ruby-2.7.6).
+  Generated on Fri Jul  1 09:22:26 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.7.6).
 </div>
 
     </div>
