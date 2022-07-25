@@ -86,8 +86,8 @@ module Belvo
       options: nil
     )
       options = LinkOptions.from(options)
-      options.certificate = Utils.read_file_to_b64(options.certificate)
-      options.private_key = Utils.read_file_to_b64(options.private_key)
+      options.certificate = ::Utils.read_file_to_b64(options.certificate)
+      options.private_key = ::Utils.read_file_to_b64(options.private_key)
       body = {
         institution: institution,
         username: username,
@@ -107,8 +107,8 @@ module Belvo
     # @raise [RequestError] If response code is different than 2XX
     def update(id:, password: nil, password2: nil, options: nil)
       options = LinkOptions.from(options)
-      options.certificate = Utils.read_file_to_b64(options.certificate)
-      options.private_key = Utils.read_file_to_b64(options.private_key)
+      options.certificate = ::Utils.read_file_to_b64(options.certificate)
+      options.private_key = ::Utils.read_file_to_b64(options.private_key)
       body = {
         password: password,
         password2: password2,
